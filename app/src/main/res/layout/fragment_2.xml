@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="General Settings"
+        android:id="@+id/txt_general1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Keep unlocked when idle"
+        android:id="@+id/sw_switch1"
+        android:checked="false"
+        android:layout_below="@+id/txt_general1"
+        android:layout_alignParentStart="true"
+        android:background="@color/cardview_light_background"
+        />
+
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sw_switch3"
+        android:text="Automatically_return_to_sell_screen_after_sale"
+        android:checked="false"
+        android:layout_below="@+id/sw_switch2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="64dp"
+        android:background="@color/cardview_light_background"/>
+
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Return after 10 seconds"
+        android:id="@+id/sw_switch2"
+        android:layout_below="@+id/sw_switch1"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="67dp"
+        android:background="@color/cardview_light_background"/>
+
+    </RelativeLayout>
+</RelativeLayout>

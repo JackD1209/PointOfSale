@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/product_details_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/product_details_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="10dp"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <Button
+                    android:id="@+id/product_details_delete_category"
+                    android:layout_width="110dp"
+                    android:layout_height="35dp"
+                    android:text="- Category"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    />
+
+                <Button
+                    android:id="@+id/product_details_add_supplier"
+                    android:layout_width="110dp"
+                    android:layout_height="35dp"
+                    android:text="+ Supplier"
+                    android:layout_toStartOf="@+id/product_details_delete_category"
+                    android:layout_alignParentTop="true"
+                    />
+
+                <Button
+                    android:id="@+id/product_details_deleteBtn"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:text="Delete" />
+
+                <Button
+                    android:id="@+id/product_details_editBtn"
+                    android:layout_width="110dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@+id/product_details_deleteBtn"
+                    android:text="Edit" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="10dp"
+                        android:text="Category"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="10dp"
+                        android:text="Selling Price"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="10dp"
+                        android:text="Cold Price"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/product_details_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="10dp" />
+
+                    <TextView
+                        android:id="@+id/product_details_sellingprice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="10dp" />
+
+                    <TextView
+                        android:id="@+id/product_details_coldprice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="10dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="10dp"
+                        android:text="Active Supplier"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="10dp"
+                        android:text="Supplier Code"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="10dp"
+                        android:text="Cost Price"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/product_details_activesupplier"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="10dp" />
+
+                    <TextView
+                        android:id="@+id/product_details_suppliercode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="10dp" />
+
+                    <TextView
+                        android:id="@+id/product_details_costprice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="10dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="10dp"
+                    android:text="Inventory"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/product_details_inventory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="10dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f99d9d"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:text="Suppliers"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="20dp">
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:background="#EDEDED"
+                        android:paddingBottom="1dip"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="1dip"
+                        android:paddingTop="1dip">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:background="#EDEDED"
+                            android:gravity="center_vertical|start"
+                            android:paddingEnd="3dp"
+                            android:paddingStart="0dp"
+                            android:text="Name"
+                            android:textColor="#2E2828"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="4"
+                        android:background="#EDEDED"
+                        android:paddingBottom="1dip"
+                        android:paddingLeft="1dip"
+                        android:paddingTop="1dip">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:background="#EDEDED"
+                            android:gravity="center_vertical|start"
+                            android:paddingEnd="3dp"
+                            android:paddingStart="0dp"
+                            android:text="Info"
+                            android:textColor="#2E2828"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:background="#EDEDED"
+                        android:paddingBottom="1dip"
+                        android:paddingLeft="1dip"
+                        android:paddingTop="1dip">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:background="#EDEDED"
+                            android:gravity="center_vertical|start"
+                            android:paddingRight="3dp"
+                            android:text="Cost"
+                            android:textColor="#2E2828"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:background="#EDEDED"
+                        android:paddingBottom="1dip"
+                        android:paddingLeft="1dip"
+                        android:paddingTop="1dip">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:background="#EDEDED"
+                            android:gravity="center_vertical|start"
+                            android:paddingEnd="3dp"
+                            android:paddingStart="0dp"
+                            android:text="Profit Margin"
+                            android:textColor="#2E2828"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:background="#EDEDED"
+                        android:paddingBottom="1dip"
+                        android:paddingLeft="1dip"
+                        android:paddingTop="1dip">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:background="#EDEDED"
+                            android:gravity="center_vertical|start"
+                            android:paddingRight="3dp"
+                            android:text="Last Updated On"
+                            android:textColor="#2E2828"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:background="#EDEDED"
+                        android:paddingBottom="1dip"
+                        android:paddingStart="1dip"
+                        android:paddingTop="1dip">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:background="#EDEDED"
+                            android:gravity="center_vertical|start"
+                            android:paddingEnd="3dp"
+                            android:text="Added by"
+                            android:textColor="#2E2828"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/product_details_suppliers_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="10dp">
+
+                </ListView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f99d9d"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="10dp"
+                    android:text="Inventory History"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="20dp">
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:background="#EDEDED"
+                        android:paddingBottom="1dip"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="1dip"
+                        android:paddingTop="1dip">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:background="#EDEDED"
+                            android:gravity="center_vertical|start"
+                            android:paddingEnd="3dp"
+                            android:paddingStart="0dp"
+                            android:text="Supplier"
+                            android:textColor="#2E2828"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="4"
+                        android:background="#EDEDED"
+                        android:paddingBottom="1dip"
+                        android:paddingEnd="1dip"
+                        android:paddingStart="0dp"
+                        android:paddingTop="1dip">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:background="#EDEDED"
+                            android:gravity="center_vertical|start"
+                            android:paddingEnd="3dp"
+                            android:paddingStart="0dp"
+                            android:text="Remark"
+                            android:textColor="#2E2828"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:background="#EDEDED"
+                        android:paddingBottom="1dip"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="1dip"
+                        android:paddingTop="1dip">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:background="#EDEDED"
+                            android:gravity="center_vertical|start"
+                            android:paddingEnd="3dp"
+                            android:paddingStart="0dp"
+                            android:text="Cost"
+                            android:textColor="#2E2828"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:background="#EDEDED"
+                        android:paddingBottom="1dip"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="1dip"
+                        android:paddingTop="1dip">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:background="#EDEDED"
+                            android:gravity="center_vertical|start"
+                            android:paddingEnd="3dp"
+                            android:paddingStart="0dp"
+                            android:text="Profit Margin"
+                            android:textColor="#2E2828"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:background="#EDEDED"
+                        android:paddingBottom="1dip"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="1dip"
+                        android:paddingTop="1dip">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:background="#EDEDED"
+                            android:gravity="center_vertical|start"
+                            android:paddingEnd="3dp"
+                            android:paddingStart="0dp"
+                            android:text="Updated On"
+                            android:textColor="#2E2828"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:background="#EDEDED"
+                        android:paddingBottom="1dip"
+                        android:paddingStart="1dip"
+                        android:paddingTop="1dip">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:background="#EDEDED"
+                            android:gravity="center_vertical|start"
+                            android:paddingEnd="3dp"
+                            android:paddingStart="0dp"
+                            android:text="QTY"
+                            android:textColor="#2E2828"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/product_details_iventoryhistory_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="10dp">
+
+                </ListView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f99d9d"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="10dp"
+                    android:text="Promotions"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:paddingLeft="20dp">
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="4"
+                        android:background="#EDEDED"
+                        android:paddingBottom="1dip"
+                        android:paddingStart="1dip"
+                        android:paddingTop="1dip">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:background="#EDEDED"
+                            android:gravity="center_vertical|start"
+                            android:paddingRight="3dp"
+                            android:text="Promotion Name"
+                            android:textColor="#2E2828"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:background="#EDEDED"
+                        android:paddingBottom="1dip"
+                        android:paddingLeft="1dip"
+                        android:paddingTop="1dip">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:background="#EDEDED"
+                            android:gravity="center_vertical|start"
+                            android:paddingRight="3dp"
+                            android:text="Type"
+                            android:textColor="#2E2828"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:background="#EDEDED"
+                        android:paddingBottom="1dip"
+                        android:paddingLeft="1dip"
+                        android:paddingTop="1dip">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:background="#EDEDED"
+                            android:gravity="center_vertical|start"
+                            android:paddingRight="3dp"
+                            android:text="Start Date"
+                            android:textColor="#2E2828"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:background="#EDEDED"
+                        android:paddingBottom="1dip"
+                        android:paddingLeft="1dip"
+                        android:paddingTop="1dip">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:background="#EDEDED"
+                            android:gravity="center_vertical|start"
+                            android:paddingRight="3dp"
+                            android:text="End Date"
+                            android:textColor="#2E2828"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:background="#EDEDED"
+                        android:paddingBottom="1dip"
+                        android:paddingLeft="1dip"
+                        android:paddingTop="1dip">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:background="#EDEDED"
+                            android:gravity="center_vertical|start"
+                            android:paddingEnd="3dp"
+                            android:paddingStart="0dp"
+                            android:text="Created By"
+                            android:textColor="#2E2828"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/product_details_promotions_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="10dp">
+
+                </ListView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#f99d9d"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="10dp"
+                    android:text="Scheduled Price"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="20dp">
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:background="#EDEDED"
+                        android:paddingBottom="1dip"
+                        android:paddingStart="1dip"
+                        android:paddingTop="1dip">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:background="#EDEDED"
+                            android:gravity="center_vertical|start"
+                            android:paddingRight="3dp"
+                            android:textColor="#2E2828"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:background="#EDEDED"
+                        android:paddingBottom="1dip"
+                        android:paddingLeft="1dip"
+                        android:paddingTop="1dip">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:background="#EDEDED"
+                            android:gravity="center_vertical|start"
+                            android:paddingRight="3dp"
+                            android:text="Current Price"
+                            android:textColor="#2E2828"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:background="#EDEDED"
+                        android:paddingBottom="1dip"
+                        android:paddingLeft="1dip"
+                        android:paddingTop="1dip">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:background="#EDEDED"
+                            android:gravity="center_vertical|start"
+                            android:paddingRight="3dp"
+                            android:text="New Price"
+                            android:textColor="#2E2828"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:background="#EDEDED"
+                        android:paddingBottom="1dip"
+                        android:paddingLeft="1dip"
+                        android:paddingTop="1dip">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:background="#EDEDED"
+                            android:gravity="center_vertical|start"
+                            android:paddingRight="3dp"
+                            android:text="Start Date"
+                            android:textColor="#2E2828"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:layout_weight="2"
+                        android:background="#EDEDED"
+                        android:paddingBottom="1dip"
+                        android:paddingLeft="1dip"
+                        android:paddingTop="1dip">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:background="#EDEDED"
+                            android:gravity="center_vertical|start"
+                            android:paddingRight="3dp"
+                            android:text="Created By"
+                            android:textColor="#2E2828"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Selling Price"
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/product_details_scheduledprice_selling_current"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/product_details_scheduledprice_selling_new"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/product_details_scheduledprice_selling_startdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/product_details_scheduledprice_selling_createdby"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="15dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Cold Price"
+                            android:textColor="#000000" />
+
+                        <TextView
+                            android:id="@+id/product_details_scheduledprice_cold_current"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/product_details_scheduledprice_cold_new"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/product_details_scheduledprice_cold_startdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/product_details_scheduledprice_cold_createdby"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

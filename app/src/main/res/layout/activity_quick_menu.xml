@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/all_layout">
+        <include layout="@layout/toolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:baselineAligned="false"
+
+           >
+            <LinearLayout
+                android:background="@drawable/right_border"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_weight="30"
+                android:layout_height="match_parent">
+                <android.support.v7.widget.SearchView
+                    android:iconifiedByDefault="false"
+                    android:layout_marginTop="@dimen/search_view_margin_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/svProducts"
+                    android:layout_alignParentStart="true" />
+
+                <ListView
+                    android:id="@+id/lvProducts"
+                    android:layout_width="400dp"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    ></ListView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_margin="@dimen/activity_vertical_margin"
+                        android:textSize="18sp"
+                        android:id="@+id/tvQuickKeyGuide"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quick_key_guide" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_weight="70"
+                android:orientation="vertical"
+                android:layout_height="match_parent"
+                android:id="@+id/all_layout2"
+                >
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vpQuickKeys"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <com.viewpagerindicator.CirclePageIndicator
+                    android:id="@+id/pagerIndicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:padding="3dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/main_drawer" />
+</android.support.v4.widget.DrawerLayout>

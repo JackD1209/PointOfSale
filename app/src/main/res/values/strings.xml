@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Point Of Sale</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="ProductColumn">Product</string>
+    <string name="CategoryColumn">Category</string>
+    <string name="SupplierColumn">Supplier</string>
+    <string name="CostColumn">Cost</string>
+    <string name="SellingColumn">Selling</string>
+    <string name="InventoryColumn">Inventory</string>
+    <string name="ColdPrice">Cold Price</string>
+    <string name="ActiveSupplier">Active Supplier</string>
+    <string name="SupplierCode">Supplier Code</string>
+    <string name="back"><![CDATA[<<< Back]]></string>
+    <color name="blue">#0000FF</color>
+    <color name="white">#FFFFFF</color>
+
+    <string name="filer_status_prompt">Choose a status</string>
+    <string name="filer_date_prompt">Choose a status</string>
+    <string name="back1"><![CDATA[<<< Back]]></string>
+    <string name="forward"><![CDATA[Forward >>>]]></string>
+    <string-array name="status_arrays">
+        <item>Filter by sale status</item>
+        <item>Voided</item>
+        <item>Closed</item>
+    </string-array>
+
+    <string-array name="date_arrays">
+        <item>Filter by date</item>
+        <item>Earliest</item>
+        <item>Latest</item>
+    </string-array>
+
+    <string name="quick_key_guide">Search for a product then tap to create Quick Key.</string>
+    <string name="add_quick_key_guide">You are adding Quick Key for product item below:</string>
+    <string name="add_quick_key_hint">Add you quick key here</string>
+    <string name="close_register">CLOSE REGISTER</string>
+</resources>

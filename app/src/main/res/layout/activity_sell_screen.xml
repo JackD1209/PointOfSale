@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/toolbar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/hint"
+                android:hint="@string/close_register"
+                android:visibility="gone" />
+            <!--Include your layout here -->
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:id="@+id/left_layout">
+
+                <LinearLayout
+                    android:id="@+id/menu_name_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@android:color/holo_blue_dark">
+
+                    <TextView
+                        android:id="@+id/back_textView"
+                        android:paddingTop="5dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="0dp"
+                        android:layout_weight="2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/back" />
+
+                    <TextView
+                        android:id="@+id/selectedMenuName_textView"
+                        android:paddingTop="5dp"
+                        android:layout_weight="3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="Category"/>
+
+                    <EditText
+                        android:id="@+id/sell_screen_search_edtitext"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Search Product"/>
+
+                    <Button
+                        android:id="@+id/sell_screen_cancel_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cancel Search"/>
+
+                </LinearLayout>
+
+
+                <GridView
+                    android:paddingTop="10dp"
+                    android:id="@+id/sellscreen_gridview"
+                    android:columnWidth="90dp"
+                    android:numColumns="5"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical">
+                </GridView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#FFFFFF"
+                android:orientation="vertical"
+                android:layout_weight="3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/io_layout">
+
+                <ListView
+                    android:id="@+id/sale_transactions_listview"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </ListView>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:paddingLeft="10dp"
+                            android:paddingTop="10dp"
+                            android:layout_weight="1"
+                            android:text="Sub-total"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+
+                        <TextView
+                            android:paddingTop="10dp"
+                            android:layout_weight="3"
+                            android:id="@+id/amount_of_sub_total"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/sell_screen_add_discount"
+                            android:paddingTop="10dp"
+                            android:textColor="#0272E1"
+                            android:paddingLeft="10dp"
+                            android:text="Add Discount"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <TextView
+                            android:paddingTop="10dp"
+                            android:id="@+id/sell_screen_display_discount"
+                            android:layout_weight="3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/sell_screen_add_tax"
+                            android:paddingTop="10dp"
+                            android:textColor="#0272E1"
+                            android:paddingLeft="10dp"
+                            android:text="Add Tax"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <TextView
+                            android:paddingTop="10dp"
+                            android:id="@+id/sell_screen_display_tax"
+                            android:layout_weight="3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:paddingTop="10dp"
+                            android:paddingStart="10dp"
+                            android:text="Total"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+
+                        <TextView
+                            android:paddingTop="10dp"
+                            android:id="@+id/amount_of_total"
+                            android:layout_weight="3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:background="#0978E8"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <Button
+                            android:id="@+id/pay_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textAlignment="viewStart"
+                            android:text="Pay"
+                            android:background="@android:color/holo_blue_light"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/main_drawer" />
+</android.support.v4.widget.DrawerLayout>
